@@ -134,7 +134,7 @@ class JwtAccessToken extends AccessToken
             'jti'        => $id,
             'iss'        => $this->config['issuer'],
             'aud'        => $client_id,
-            'sub'        => $user_id,
+            'sub'        => "$user_id",
             'exp'        => $expires,
             'iat'        => time(),
             'token_type' => $this->config['token_type'],
